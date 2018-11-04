@@ -36,6 +36,19 @@ The application in this project makes it vastly easier to set up and use Qlik Se
 * The application handles everything around setting up callbacks that QRS will use to notify about the subscribed to events
 * All events are forwarded as MQTT messages, which can be acted upon by downstream services.
 
+Running the gateway and having it subscribe to reload task events looks like this:
+
+![reload-task-verbose.yaml](doc/img/reload-task-verbose-yaml.png "Running the gateway")
+
+Setting the debug level to 'debug' will greatly increase the information logged to console and disk log files.
+
+## The config files
+
+Both config files are in YAML, which makes them easy to read and understand.
+Event subscriptions are defined in notification.yaml, which can look like this:
+
+![notification.yaml](doc/img/notification-yaml.png "Setting up event subscriptions")
+
 ## What is MQTT
 
 [MQTT](https://en.wikipedia.org/wiki/MQTT) is a machine-to-machine messaging protocol. It is widely used in Internet of Things applications, but works equally well for server based messaging.
