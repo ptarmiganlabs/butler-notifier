@@ -38,7 +38,7 @@ The application in this project makes it vastly easier to set up and use Qlik Se
 
 Running the gateway and having it subscribe to reload task events looks like this:
 
-![reload-task-verbose.yaml](doc/img/reload-task-verbose-yaml.png "Running the gateway")
+![reload-task-verbose.png](doc/img/reload-task-verbose.png "Running the gateway")
 
 Setting the debug level to 'debug' will greatly increase the information logged to console and disk log files.
 
