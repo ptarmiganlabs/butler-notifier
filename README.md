@@ -49,6 +49,10 @@ Event subscriptions are defined in notification.yaml, which can look like this:
 
 ![notification.yaml](doc/img/notification-yaml.png "Setting up event subscriptions")
 
+The file where more general settings are defined looks like this:
+
+![development.template.yaml](doc/img/development-template-yaml.png "Main config file")
+
 ## What is MQTT
 
 [MQTT](https://en.wikipedia.org/wiki/MQTT) is a machine-to-machine messaging protocol. It is widely used in Internet of Things applications, but works equally well for server based messaging.
