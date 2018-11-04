@@ -1,0 +1,19 @@
+# Docs: https://help.qlik.com/en-US/sense-developer/September2018/Subsystems/RepositoryServiceAPI/Content/Sense_RepositoryServiceAPI/RepositoryServiceAPI-Notification-Create-Change-Subscription.htm
+
+notifications:
+  - typeName: <typename to target, or empty for all entity types>
+    id: <id of entity to target, or empty for all entities>
+    filter: <filter, or empty>
+    condition: <condition, or empty>
+    changeType: <change type to target, or empty>
+    propertyName: 
+    callbackEndpointName: <name of callback endpoint>
+    
+  - typeName: <typename to target, or empty for all entity types>
+    id: <id of entity to target, or empty for all entities>
+    filter: <filter, or empty>
+    condition: <condition, or empty>
+    changeType: <change type to target, or empty>
+    propertyName: 
+    callbackEndpointName: <name of callback endpoint>
+

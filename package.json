@@ -1,0 +1,36 @@
+{
+  "name": "qliksense-notification-to-mqtt-gateway",
+  "version": "0.0.1",
+  "description": "A gateway forwarding Qlik Sense event notifications to MQTT messages",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mountaindude/qliksense-notification-to-mqtt-gateway.git"
+  },
+  "keywords": [
+    "qliksense",
+    "mqtt",
+    "notifications"
+  ],
+  "author": "Göran Sander",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mountaindude/qliksense-notification-to-mqtt-gateway/issues"
+  },
+  "homepage": "https://github.com/mountaindude/qliksense-notification-to-mqtt-gateway#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "config": "^2.0.1",
+    "express": "^4.16.4",
+    "js-yaml": "^3.12.0",
+    "mqtt": "^2.18.8",
+    "qrs-interact": "^3.0.1",
+    "winston": "^3.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.5"
+  }
+}

@@ -1,0 +1,26 @@
+# Rename this file to production.yaml, and fill in data as needed below.
+
+# Possible log levels are silly, debug, verbose, info, warn, error
+defaultLogLevel: debug
+
+# Directory where log files are stored (no trailing / )
+logDirectory: "log"
+
+# MQTT config parameters
+mqttConfig:
+  brokerHost: <IP or FQDN of MQTT broker>
+  brokerPort: <Port that the broker listens on, usually 1883>
+  # Topic should end with /
+  baseTopic: qliksense-notification/
+
+callbackHost:
+  # Format: http://<IP or FQDN of host where this gateway is running>
+  baseURL: http://1.2.3.4
+  serverPort: <Post that the gateway will use for callbacks from QRS>
+
+# Qlik Repository Service (QRS) config
+qrs:
+  host: <IP or FQDN of host where Qlik Repository Service (QRS) is running>
+  # Paths to client certificates to use when connecting to Sense server. Can be pem or pvk/cer
+  clientCertPath: "/path/to/client/cert/client.pem"
+  clientCertKeyPath: "/path/to/client/cert/client_key.pem"  
