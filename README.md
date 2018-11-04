@@ -1,6 +1,6 @@
-# Qliksense notification to MQTT gateway
+# Forwarding Qlik Sense event notifications to MQTT messages
 
-Forwarding Qlik Sense event notifications to MQTT messages
+This repository is all about making it as easy as possible to get started with and using the Qlik Sense notification API.
 
     ==> Work in progress <==
     This project is in pre-release state.
@@ -48,6 +48,8 @@ Both config files are in YAML, which makes them easy to read and understand.
 Event subscriptions are defined in notification.yaml, which can look like this:
 
 ![notification.yaml](doc/img/notification-yaml.png "Setting up event subscriptions")
+
+The syntax used in `notification.yaml` is the same as in the underlying Qlik Sense notification API. Thus, [Qlik's help pages](https://help.qlik.com/en-US/sense-developer/September2018/Subsystems/RepositoryServiceAPI/Content/Sense_RepositoryServiceAPI/RepositoryServiceAPI-Notification-Create-Change-Subscription.htm) come in handy when defining what notifications are of interest.
 
 The file where more general settings are defined looks like this:
 
