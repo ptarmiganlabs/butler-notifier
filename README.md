@@ -2,12 +2,6 @@
 
 This repository is all about making it as easy as possible to get started with and using the Qlik Sense notification API.
 
-    ==> Work in progress <==
-    This project is in pre-release state.
-    Some features are not ready and/or optimized.
-
-    Feel free to fork the project and contribute to the development!
-
 ## Rationale
 
 Qlik Sense offers a very powerful, but somewhat hard to use [notification API](https://help.qlik.com/en-US/sense-developer/September2018/Subsystems/RepositoryServiceAPI/Content/Sense_RepositoryServiceAPI/RepositoryServiceAPI-Notification-Create-Change-Subscription.htm).
