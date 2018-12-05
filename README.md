@@ -10,7 +10,7 @@ This repository is all about making it as easy as possible to get started with a
 
 ## Rationale
 
-Qlik Sense offers a very powerful, but somewhat hard to use [notification API](https://help.qlik.com/en-US/sense-developer/September2018/Subsystems/RepositoryServiceAPI/Content/Sense_RepositoryServiceAPI/RepositoryServiceAPI-Notification-Create-Change-Subscription.htm).
+[Qlik Sense](https://www.qlik.com/us/products/qlik-sense) offers a very powerful, but somewhat hard to use [notification API](https://help.qlik.com/en-US/sense-developer/September2018/Subsystems/RepositoryServiceAPI/Content/Sense_RepositoryServiceAPI/RepositoryServiceAPI-Notification-Create-Change-Subscription.htm).
 
 Through this API you can get notified when all kinds of events happen in a Sense environment.
 The API is in fact extremely rich, you can get notified when almost *anything* happens...
