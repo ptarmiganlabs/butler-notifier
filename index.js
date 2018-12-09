@@ -181,7 +181,7 @@ try {
 
                         })
                         .catch(err => {
-                            logger.warning(`Error while getting event details from QRS: ${err}. If the event was a delete, this warning is expected behaviour.`);
+                            logger.warn(`Error while getting event details from QRS: ${err}. If the event was a delete, this warning is expected behaviour.`);
                         })
                 });
             }
