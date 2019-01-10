@@ -6,7 +6,7 @@ notifications:
     filter: <filter, or empty>
     condition: <condition, or empty>
     changeType: <change type to target, or empty>
-    propertyName: 
+    propertyName: <property name, or empty>
     callbackEndpointName: <name of callback endpoint>
     
   - typeName: <typename to target, or empty for all entity types>
@@ -14,6 +14,6 @@ notifications:
     filter: <filter, or empty>
     condition: <condition, or empty>
     changeType: <change type to target, or empty>
-    propertyName: 
+    propertyName: <property name, or empty>
     callbackEndpointName: <name of callback endpoint>
 
