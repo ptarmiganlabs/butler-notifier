@@ -68,7 +68,6 @@ var logger = winston.createLogger({
 // Startup message
 logger.info('Starting Qlik Sense notifications to MQTT gateway.');
 logger.info("Log level is: " + logTransports.console.level);
-logger.info("App version is: " + appVersion);
 
 
 // ------------------------------------
@@ -155,35 +154,29 @@ try {
 
                             // Post to different MQTT topics depending on what event was received
                             if (event.objectType.toLowerCase() == 'executionresult') {
-                                logger.verbose(`Posting to MQTT: Execution result`)
-
                                 // Post to MQTT topic qliksense/notification/executionResult/<app ID>/<task ID>/lastKnownStatus
                                 // This is a task's most recent reported reload status (triggered, queued, running, failed etc). 
-                                mqttClient.publish(`${config.get('mqttConfig.baseTopic')}/executionResult/${result.body.appID}/${result.body.taskID}/lastKnownStatus`, JSON.stringify(result.body.status));
+                                mqttClient.publish(`qliksense/notification/executionResult/${result.body.appID}/${result.body.taskID}/lastKnownStatus`, JSON.stringify(result.body.status));
 
                                 // Post to MQTT topic qliksense/notification/executionResult/<app ID>/<task ID>/lastKnownFullState
                                 // This is a task's most recent, complete reload state. This is a fairly large JSON.
-                                mqttClient.publish(`${config.get('mqttConfig.baseTopic')}/executionResult/${result.body.appID}/${result.body.taskID}/lastKnownFullState`, JSON.stringify(result.body));
+                                mqttClient.publish(`qliksense/notification/executionResult/${result.body.appID}/${result.body.taskID}/lastKnownFullState`, JSON.stringify(result.body));
 
                                 // Post to MQTT topic qliksense/notification/executionResult/<app ID>/<task ID>/<execution result code>
                                 // This is the complete reload state, published to a topic specific for the result code
-                                mqttClient.publish(`${config.get('mqttConfig.baseTopic')}/executionResult/${result.body.appID}/${result.body.taskID}/${result.body.status}`, JSON.stringify(result.body));
+                                mqttClient.publish(`qliksense/notification/executionResult/${result.body.appID}/${result.body.taskID}/${result.body.status}`, JSON.stringify(result.body));
                             } else if (event.objectType.toLowerCase() == 'user') {
-                                logger.verbose(`Posting to MQTT: User`)
-
                                 // Post to MQTT topic qliksense/notification/user/<user directory>/<user ID>/lastKnownFullState
-                                mqttClient.publish(`${config.get('mqttConfig.baseTopic')}/user/${result.body.userDirectory}/${result.body.userID}/lastKnownFullState`, JSON.stringify(result.body));
+                                mqttClient.publish(`qliksense/notification/user/${result.body.userDirectory}/${result.body.userID}/lastKnownFullState`, JSON.stringify(result.body));
 
                                 // Post to MQTT topic qliksense/notification/user/lastMessage
-                                mqttClient.publish(`${config.get('mqttConfig.baseTopic')}/user/lastMessage`, JSON.stringify(result.body));
+                                mqttClient.publish(`qliksense/notification/user/lastMessage`, JSON.stringify(result.body));
                             } else if (event.objectType.toLowerCase() == 'app') {
-                                // logger.verbose(`Posting to MQTT: App`)
-
                                 // // Post to MQTT topic qliksense/notification/app/<app ID>/lastKnownFullState
-                                // mqttClient.publish(`${config.get('mqttConfig.baseTopic')}/app/${result.body.appID}/lastKnownFullState`, JSON.stringify(result.body));
+                                // mqttClient.publish(`qliksense/notification/app/${result.body.appID}/lastKnownFullState`, JSON.stringify(result.body));
 
                                 // // Post to MQTT topic qliksense/notification/app/lastMessage
-                                // mqttClient.publish(`${config.get('mqttConfig.baseTopic')}/app/lastMessage`, JSON.stringify(result.body));
+                                // mqttClient.publish(`qliksense/notification/app/lastMessage`, JSON.stringify(result.body));
                             }
 
                         })

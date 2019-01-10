@@ -10,6 +10,6 @@ services:
       # Make config file accessible outside of container
       - "./config:/nodeapp/config"
     environment:
-      - "NODE_ENV=development"
+      - "NODE_ENV=production"
     logging:
       driver: json-file
