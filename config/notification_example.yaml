@@ -1,0 +1,56 @@
+# Docs: https://help.qlik.com/en-US/sense-developer/September2018/Subsystems/RepositoryServiceAPI/Content/Sense_RepositoryServiceAPI/RepositoryServiceAPI-Notification-Create-Change-Subscription.htm
+
+notifications:
+  - typeName: ExecutionResult
+    id: 
+    filter: 
+    condition: 
+    changeType: 
+    propertyName: 
+    callbackEndpointName: executionresult-1
+  - typeName: ExecutionResult
+    id: 
+    filter: status eq FinishedFail
+    condition: 
+    changeType: 
+    propertyName: 
+    callbackEndpointName: executionresult-2
+
+
+  - typeName: user
+    id: 
+    filter: 
+    condition: 
+    changeType: 
+    propertyName: 
+    callbackEndpointName: user-general
+  - typeName: user
+    id: 
+    filter: 
+    condition: 
+    changeType: delete
+    propertyName: 
+    callbackEndpointName: user-delete
+
+  - typeName: user
+    id: 
+    filter: userid eq 'testuser99'
+    condition: 
+    changeType: add
+    propertyName: 
+    callbackEndpointName: user-99-add
+  - typeName: user
+    id: 
+    filter: userid eq 'testuser99'
+    condition: 
+    changeType: update
+    propertyName: 
+    callbackEndpointName: user-99-update
+  - typeName: user
+    id: 
+    filter: userid eq 'testuser99'
+    condition: 
+    changeType: delete
+    propertyName: 
+    callbackEndpointName: user-99-delete
+
