@@ -29,7 +29,7 @@
     "express": "^4.16.4",
     "js-yaml": "^3.12.1",
     "mqtt": "^4.0.0",
-    "qrs-interact": "^3.0.1",
+    "qrs-interact": "^6.0.0",
     "winston": "^3.1.0"
   },
   "devDependencies": {
