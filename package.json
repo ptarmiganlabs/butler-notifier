@@ -28,11 +28,11 @@
     "config": "^3.0.1",
     "express": "^4.16.4",
     "js-yaml": "^3.12.1",
-    "mqtt": "^2.18.8",
+    "mqtt": "^4.0.0",
     "qrs-interact": "^3.0.1",
     "winston": "^3.1.0"
   },
   "devDependencies": {
-    "nodemon": "1.18.10"
+    "nodemon": "2.0.0"
   }
 }
